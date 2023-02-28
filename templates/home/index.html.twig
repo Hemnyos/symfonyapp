@@ -1,0 +1,81 @@
+<img class="logohem" src="https://i.servimg.com/u/f65/17/33/44/96/hemfli10.png">
+
+{% block body %}
+<style>
+    .logohem{
+        width: 150px;
+    }
+    body {
+        background: #141414;
+    }
+    
+    .watching {
+        display: block;
+        color: #fff;
+        font-size: 80px;
+        font-weight: unset;
+        width: 100%;
+        margin-top: 190px;
+        text-align: center;
+
+    }
+    .profil-selection {
+        display: flex;
+        margin: 5px 30%; 
+    }
+    .profil {
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .profil-pic {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .profil-pic:hover {
+        border: 5px solid white;
+    }
+    .profil-name {
+        color: #AEAEAE;
+        font-size: 20px;
+        font-family: Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    }
+    .profil-name:hover {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        width: 156px;
+    }
+
+    
+
+</style>
+
+<div class="example-wrapper">
+    <div class="watching">Who's watching ?</div>
+
+    <div class="profil-selection">
+        <div class="profil">
+            <a href="{{path ("app_pro_page")}}"><div class="profil-pic">
+                <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
+            </div>
+            <div class="profil-name">
+                Hemnyos 1
+            </div></a>
+        </div>
+        <div class="profil">
+            <a href="{{path ("app_private_page")}}"><div class="profil-pic">
+                <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
+            </div>
+            <div class="profil-name">
+                Hemnyos 2
+            </div></a>
+        </div>
+        
+    </div>
+
+</div>
+{% endblock %}
