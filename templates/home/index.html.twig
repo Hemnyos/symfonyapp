@@ -1,5 +1,6 @@
 <img class="logohem" src="https://i.servimg.com/u/f65/17/33/44/96/hemfli10.png">
 
+
 {% block body %}
 <style>
     .logohem{
@@ -45,6 +46,10 @@
     }
     a {
         text-decoration: none;
+        color: #AEAEAE;
+    }
+    a:hover {
+        color: white;
     }
     img {
         width: 156px;
@@ -63,7 +68,7 @@
                 <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
             </div>
             <div class="profil-name">
-                Hemnyos 1
+                Professional
             </div></a>
         </div>
         <div class="profil">
@@ -71,10 +76,17 @@
                 <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
             </div>
             <div class="profil-name">
-                Hemnyos 2
+                Private
             </div></a>
         </div>
-        
+        <div class="profil">
+           <a href="{{path ("app_connexion_page")}}"><div class="profil-pic">
+                <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
+            </div>
+            <div class="profil-name">
+                Connexion
+            </div></a> 
+        </div>
     </div>
 
 </div>
