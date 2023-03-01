@@ -1,6 +1,5 @@
-{% extends 'base.html.twig' %}
+{% include "partials/nav.html.twig" %}
 
-{% block title %}Hello PrivatePageController!{% endblock %}
 
 {% block body %}
 <style>
@@ -21,6 +20,8 @@
 <div class="example-wrapper">
     <h1>Bienvenue !</h1>
 
-    
+   {% include "partials/card.html.twig" %} 
 </div>
 {% endblock %}
+
+{% include "partials/footer.html.twig" %}

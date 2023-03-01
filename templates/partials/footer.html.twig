@@ -1,10 +1,10 @@
-<footer>
+{% block footer %}
     <div id="container">
         <div id="part1">
             <div id="companyinfo">
-                <a id="sitelink" href="#">Hemflix</a>
-                <p id="title">Deux Activités en une seule, quoi de mieux ?</p>
-                <p id="detail">Je tenterais de mettre à votre disposition du nouveau contenu régulièrement.</p>
+                <a id="sitelink" href="{{path ("app_home")}}">Hemflix</a>
+                <p id="title">Deux Activités réunies...</p>
+                <p id="detail">On tente des trucs avec les Bulles d'idées.</p>
             </div>
             <div id="explore">
                 <p id="txt1">Explore</p>
@@ -14,7 +14,7 @@
             </div>
             <div id="visit">
                 <p id="txt2">Visit</p>
-                <p class="text">Hemnflix </p>
+                <p class="text">Hemnyos </p>
                 <p class="text">20 Cour de Janvier</p>
                 <p class="text">Lyon 69001</p>
                 <p class="text">Phone: +33 7 70 12 87 58 </p>
@@ -27,23 +27,26 @@
             <div id="subscribe">
                 <a class="waves-effect waves-light btn">Subscribe</a>
                 <p id="txt5">Connect With US</p>
-                <i class="fab fa-facebook-square social fa-2x"></i>
-                <i class="fab fa-linkedin social fa-2x"></i>
-                <i class="fab fa-twitter-square social fa-2x"></i>
+                <i class="fab fa-facebook-square social fa-2x"> </i>
+                <i class="fab fa-linkedin social fa-2x"> </i>
+                <i class="fab fa-twitter-square social fa-2x"> </i>
+                <i class="fa-brands fa-symfony"> </i>
             </div>
         </div>
         <div id="part2">
             <p id="txt6">©copyright {{ "now"|date("Y") }} Hemflix - All right reserved</p> 
         </div>
     </div>
-</footer>
+
 
 
 <style>
 
 #container{
         width: 100%;
-        height: 330px;
+        height: 300px;
+        margin-top: 40%;
+        
     }
     #part1{
         width: 100%;
@@ -259,3 +262,4 @@
     }
 
 </style>
+{% endblock %}
