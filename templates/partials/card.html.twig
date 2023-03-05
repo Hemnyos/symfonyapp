@@ -1,14 +1,15 @@
-
+{% set pirate4 = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set pirate5 = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set symfony = {"title": "symfony", "resume": "errare humanum est", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set pirate = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set articles = {'symfony': symfony, 'pirate':pirate, 'pirate4':pirate4, 'pirate5':pirate5} %}
 
 <div class="card" style="width: 18rem;">
-    <img src="https://fr.web.img6.acsta.net/pictures/22/04/13/18/45/5502555.jpg?coixp=51&coiyp=59" class="card-img-top" alt="illustration">
+    <img src="{{ article.image}}" class="card-img-top" alt="illustration">
     <div class="card-body">
-      <h2 class="card-title">Titre ici</h2>
-      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem...</p>
-      <h5>créée par</h5>
+      <h2 class="card-title">{{ article.title | title }}</h2>
+      <p class="card-text">{{ article.resume}}</p>
+      <h5>By {{ article.author}}</h5>
 
 
 
@@ -21,8 +22,10 @@ optio, eaque rerum! Provident similique accusantium nemo autem...</p>
     font-family: cursive;
   }
   .card {
+    margin-top: 50px;
     margin-left: 50px;
     background: #292929;
+    display: block;
   }
     .card-img-top {
         width: 287px;

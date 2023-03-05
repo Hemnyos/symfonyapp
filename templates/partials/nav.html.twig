@@ -66,8 +66,13 @@
     <div class="dropdown">
         <li><img class="logoh" src="https://i65.servimg.com/u/f65/17/33/44/96/h_hemf10.png">
             <div class="dropdown-content">
-                <a class="link" href="https://linktr.ee/Hemnyos">New Article</a>
-                <a class="link" href="https://linktr.ee/Hemnyos">Disconnect</a>
+                {% set user = {"name":"Hemnyos", "role":"admin", "isConnected":"true"} %}
+                {% if user.isConnected == "true" %}
+                    <a class="link" href="https://linktr.ee/Hemnyos">New Article</a>
+                    <a class="link" href="{{path ("app_home")}}">Disconnect</a>
+                    {% else %}
+                    <a class="link" href="{{path ("app_connexion_page")}}">Connection</a>
+                {% endif %}
             </div>
         </li>
     </div>

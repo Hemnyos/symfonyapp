@@ -79,14 +79,26 @@
                 Private
             </div></a>
         </div>
+        {% set user = {"name":"Hemnyos", "role":"admin", "isConnected":"false"} %}
+        {% if user.isConnected == "true" %}
         <div class="profil">
            <a href="{{path ("app_connexion_page")}}"><div class="profil-pic">
                 <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
             </div>
             <div class="profil-name">
-                Connexion / Hemnyos
+                Connexion
             </div></a> 
         </div>
+        {% else %}
+        <div class="profil">
+           <a href="{{path ("app_inscription_page")}}"><div class="profil-pic">
+                <img src="https://i65.servimg.com/u/f65/17/33/44/96/18406110.jpg">
+            </div>
+            <div class="profil-name">
+                Inscription
+            </div></a> 
+        </div>
+        {% endif %}
     </div>
 
 </div>

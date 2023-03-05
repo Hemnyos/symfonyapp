@@ -15,12 +15,27 @@
         display: inline-block;
         text-align: center;
     }
+    .block-cards{
+        display: flex;
+    }
+    
 </style>
+{% set pirate4 = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set pirate5 = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set symfony = {"title": "symfony", "resume": "errare humanum est", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set pirate = {"title": "pirate", "resume": "teste sur aquarrel", "image": "https://bilder.wunschliste.de/gfx/pics/1200/Heartstopper-Startet-Am-22-April-Bei-Netflix.jpg.jpg", "author":"moi-même"} %}
+{% set articles = {'symfony': symfony, 'pirate':pirate, 'pirate4':pirate4, 'pirate5':pirate5} %}
 
 <div class="example-wrapper">
     <h1>Bienvenue !</h1>
 
-   {% include "partials/card.html.twig" %} 
+   
+        <div class="block-cards">
+            {% for article in articles %}
+                {% include "partials/card.html.twig" with article %} 
+            {% endfor %}
+        </div>
+    
 </div>
 {% endblock %}
 
